@@ -1,3 +1,5 @@
+<img align="left" width="80" height="80" src="https://raw.githubusercontent.com/StormTersteeg/NS-Disruption-Alert/main/resources/icon.png">
+
 # NS-Disruption-Alert
 
 Used to keep track and display NS disruptions. Releases have access to the official API, forks require you to get your own free API key at: https://apiportal.ns.nl/
