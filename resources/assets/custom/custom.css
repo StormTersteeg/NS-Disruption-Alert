@@ -1,0 +1,13 @@
+html, body { margin:0;padding:0;height:100% }
+
+* {
+  color: #003082;
+}
+
+.bg-ns-yellow {
+  background: #ffc917
+}
+
+.bg-ns-blue {
+  background: #003082
+}

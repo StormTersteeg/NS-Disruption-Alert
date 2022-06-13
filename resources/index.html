@@ -1,0 +1,39 @@
+<body>
+
+    <div id="disruptions" style="min-height:calc(100% - 92px);max-height:calc(100% - 92px);overflow-y:auto"></div>
+
+    <div class="nav nav-justified nav-tabs fixed-bottom shadow-none bg-ns-blue pt-3">
+        <div onclick="toggleNotifications()" class="btn btn-float btn-sm bg-ns-yellow shadow-none text-white d-flex justify-content-center align-items-center mx-3 mb-3">
+            <span id="notificationIndicator" class="material-icons">notifications</span>
+        </div>
+        <div data-toggle="modal" data-target="#newStationModal" class="btn btn-float btn-sm bg-ns-yellow shadow-none text-white d-flex justify-content-center align-items-center mr-3 mb-3">
+            <span class="material-icons">add</span>
+        </div>
+        <div id="stationBadges" class="mx-3 mb-3">
+            <p class="text-white"><i class="material-icons text-white">keyboard_backspace</i> voeg hier een aantal stations toe</p>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newStationModal" tabindex="-1" role="dialog" aria-labelledby="newStationModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pb-3">
+                    <h5 class="modal-title" id="newStationModalTitle">Station toevoegen</h5>
+                </div>
+                <div class="modal-body pb-0">
+                    <div class="form-group">
+                        <div class="textfield-box">
+                            <input type="text" class="form-control" id="newStationInput" placeholder="Deventer">
+                            <small class="form-text text-muted">Om een specifiek traject toe te voegen typ bijvoorbeeld: <code>Deventer - Zwolle</code>.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="addStation()">Toevoegen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
