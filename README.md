@@ -7,6 +7,8 @@ Features:
 - Add cities to detect disruptions on your route
 - Windows 10 notifications (to notify you when disruptions are present)
 
+Created with [Glide](https://github.com/StormTersteeg/Python-Glide-Framework).
+
 # Screenshots
 ![image](https://user-images.githubusercontent.com/42808385/173445158-6fc0c3a8-b35d-4e65-9fc2-d9847e140fd0.png)
 
