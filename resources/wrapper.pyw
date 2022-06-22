@@ -56,14 +56,16 @@ class Api:
 
     # scan all the disruption data for our selected stations, add them to the disruption_data if present
     for storing in response.json():
-      if any(station in storing['title'] for station in stations):
-        disruption = {
-          "title": storing['title'],
-          "situation": storing['timespans'][0]['situation']['label'],
-          "additionalTravelTime": storing['summaryAdditionalTravelTime']['shortLabel'],
-          "expectedDuration": storing['expectedDuration']['description'] if "expectedDuration" in storing else ""
-        }
-        disruption_data.append(disruption)
+      try:
+        if any(station in storing['title'] for station in stations):
+          disruption = {
+            "title": storing['title'],
+            "situation": storing['timespans'][0]['situation']['label'],
+            "additionalTravelTime": storing['summaryAdditionalTravelTime']['shortLabel'],
+            "expectedDuration": storing['expectedDuration']['description'] if "expectedDuration" in storing else ""
+          }
+          disruption_data.append(disruption)
+      except: pass
     
     if self.notify and len(disruption_data)>0:
       toaster.show_toast("NS Disruption Alert", f"Vertraging gevonden op 1 van jouw stations", icon_path='', threaded=True)
